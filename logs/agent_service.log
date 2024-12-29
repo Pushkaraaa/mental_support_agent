@@ -1,0 +1,36 @@
+2024-12-29 16:28:29,559 - __main__ - INFO - [agent_service.py:79] - Processing request 85d3e1d1-85be-4270-958e-35aa160fff7f
+2024-12-29 16:28:29,559 - __main__ - INFO - [agent_service.py:91] - Generated query: 
+        Generate recommendations for a person with:
+        Name: John
+        Age: 25
+        Behaviors: anxiety, social withdrawal
+        Interests: music, reading
+        Therapy: CBT
+        
+2024-12-29 16:28:29,617 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://localhost:8000/search "HTTP/1.1 404 Not Found"
+2024-12-29 16:28:29,617 - __main__ - ERROR - [agent_service.py:122] - Error processing request 85d3e1d1-85be-4270-958e-35aa160fff7f: 404: {"detail":"Not Found"}
+Traceback (most recent call last):
+  File "/Users/apple/freelance/mental_support_agent/agent_service.py", line 94, in get_recommendations
+    context_docs = await query_retriever(query)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/freelance/mental_support_agent/agent_service.py", line 72, in query_retriever
+    raise HTTPException(status_code=response.status_code, detail=response.text)
+fastapi.exceptions.HTTPException: 404: {"detail":"Not Found"}
+2024-12-29 16:32:30,952 - __main__ - INFO - [agent_service.py:79] - Processing request c420ddae-4119-4078-8bd7-7cf1a8e148b3
+2024-12-29 16:32:30,953 - __main__ - INFO - [agent_service.py:91] - Generated query: 
+        Generate recommendations for a person with:
+        Name: John
+        Age: 25
+        Behaviors: anxiety, social withdrawal
+        Interests: music, reading
+        Therapy: CBT
+        
+2024-12-29 16:32:30,995 - httpx - INFO - [_client.py:1740] - HTTP Request: POST http://localhost:8000/search "HTTP/1.1 404 Not Found"
+2024-12-29 16:32:30,996 - __main__ - ERROR - [agent_service.py:122] - Error processing request c420ddae-4119-4078-8bd7-7cf1a8e148b3: 404: {"detail":"Not Found"}
+Traceback (most recent call last):
+  File "/Users/apple/freelance/mental_support_agent/agent_service.py", line 94, in get_recommendations
+    context_docs = await query_retriever(query)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/apple/freelance/mental_support_agent/agent_service.py", line 72, in query_retriever
+    raise HTTPException(status_code=response.status_code, detail=response.text)
+fastapi.exceptions.HTTPException: 404: {"detail":"Not Found"}
